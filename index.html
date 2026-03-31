@@ -49,21 +49,46 @@
         </div>
     </section>
 
-    <!-- ACT 2: Signals -->
+    <!-- ACT 2: Before/After + Signals -->
+    <section class="act act-before">
+        <div class="act-content">
+            <div class="section-header">
+                <span class="section-tag">What you get today</span>
+                <h2>Search "Apple Xnor.ai" in any deal database.</h2>
+            </div>
+            <div class="before-grid">
+                <div class="before-card">
+                    <span class="before-source">PitchBook</span>
+                    <span class="before-result">Deal value: <strong>Undisclosed</strong></span>
+                </div>
+                <div class="before-card">
+                    <span class="before-source">Crunchbase</span>
+                    <span class="before-result">Acquisition price: <strong>—</strong></span>
+                </div>
+                <div class="before-card">
+                    <span class="before-source">CB Insights</span>
+                    <span class="before-result">Terms not disclosed</span>
+                </div>
+            </div>
+            <p class="before-summary">Three paid subscriptions. Zero price data. This is the industry standard.</p>
+        </div>
+    </section>
+
     <section class="act act-signals">
         <div class="act-content">
             <div class="section-header">
-                <span class="section-tag">Signal detection</span>
-                <h2>The price isn't invisible.<br>It leaves traces everywhere.</h2>
+                <span class="section-tag">What DarkComps finds</span>
+                <h2>We look where they don't.</h2>
+                <p class="section-sub">For the same deal, DarkComps extracts five pricing signals from freely available public records:</p>
             </div>
 
             <div class="signal-feed">
                 <div class="signal signal-red" data-delay="0">
                     <div class="signal-top">
-                        <span class="signal-source">SEC / FTC Records</span>
+                        <span class="signal-source">FTC / HSR database</span>
                         <span class="signal-badge badge-ceiling">Hard ceiling</span>
                     </div>
-                    <p class="signal-finding">No Hart-Scott-Rodino filing found for this acquisition</p>
+                    <p class="signal-finding">No Hart-Scott-Rodino antitrust filing found &mdash; meaning the deal was below the reporting threshold</p>
                     <div class="signal-result">
                         <span class="constraint constraint-red">Price &lt; $94M</span>
                     </div>
@@ -71,10 +96,10 @@
 
                 <div class="signal signal-green" data-delay="1">
                     <div class="signal-top">
-                        <span class="signal-source">Crunchbase</span>
+                        <span class="signal-source">Funding records</span>
                         <span class="signal-badge badge-floor">Hard floor</span>
                     </div>
-                    <p class="signal-finding">Total raised: $14.6M across Seed and Series A rounds</p>
+                    <p class="signal-finding">Xnor raised $14.6M (Seed + Series A). Investors wouldn't accept less than they put in.</p>
                     <div class="signal-result">
                         <span class="constraint constraint-green">Price &gt; $14.6M</span>
                     </div>
@@ -82,10 +107,10 @@
 
                 <div class="signal signal-amber" data-delay="2">
                     <div class="signal-top">
-                        <span class="signal-source">LinkedIn / Press</span>
+                        <span class="signal-source">Headcount data</span>
                         <span class="signal-badge badge-anchor">Anchor</span>
                     </div>
-                    <p class="signal-finding">Approximately 70 employees at time of acquisition</p>
+                    <p class="signal-finding">~70 employees at acquisition. Comparable acqui-hires price at $0.5M&ndash;$3M per head.</p>
                     <div class="signal-result">
                         <span class="constraint constraint-amber">$35M &ndash; $210M range</span>
                     </div>
@@ -93,10 +118,10 @@
 
                 <div class="signal signal-amber" data-delay="3">
                     <div class="signal-top">
-                        <span class="signal-source">GeekWire, The Verge, Bloomberg</span>
+                        <span class="signal-source">Press reports</span>
                         <span class="signal-badge badge-anchor">Anchor</span>
                     </div>
-                    <p class="signal-finding">"reportedly approximately $200 million"</p>
+                    <p class="signal-finding">GeekWire, The Verge, and Bloomberg each reported "approximately $200 million"</p>
                     <div class="signal-result">
                         <span class="constraint constraint-amber">~$200M &plusmn; 30%</span>
                     </div>
@@ -104,10 +129,10 @@
 
                 <div class="signal signal-amber" data-delay="4">
                     <div class="signal-top">
-                        <span class="signal-source">Apple 10-K (FY2020)</span>
+                        <span class="signal-source">Acquirer's 10-K filing</span>
                         <span class="signal-badge badge-anchor">Sum constraint</span>
                     </div>
-                    <p class="signal-finding">Total M&amp;A spend $1.5B &mdash; known deals sum to $1.3B</p>
+                    <p class="signal-finding">Apple's FY2020 total M&amp;A spend was $1.5B. Known deals account for $1.3B. The remainder constrains unknowns.</p>
                     <div class="signal-result">
                         <span class="constraint constraint-amber">Residual budget ~$200M</span>
                     </div>
@@ -177,43 +202,6 @@
 
             <div class="converge-summary">
                 <p>Five public signals. No insider information. One calibrated range.</p>
-            </div>
-        </div>
-    </section>
-
-    <!-- ACT 3.5: Comparison -->
-    <section class="act act-compare">
-        <div class="act-content">
-            <div class="section-header">
-                <span class="section-tag">The difference</span>
-                <h2>Same deal. Different answers.</h2>
-            </div>
-
-            <div class="compare-grid">
-                <div class="compare-card compare-them">
-                    <div class="compare-logo">PitchBook</div>
-                    <div class="compare-answer">
-                        <span class="compare-label">Apple / Xnor.ai price</span>
-                        <span class="compare-value compare-redacted">Undisclosed</span>
-                    </div>
-                    <div class="compare-footnote">$26,400/yr subscription</div>
-                </div>
-                <div class="compare-card compare-them">
-                    <div class="compare-logo">Crunchbase</div>
-                    <div class="compare-answer">
-                        <span class="compare-label">Apple / Xnor.ai price</span>
-                        <span class="compare-value compare-redacted">Undisclosed</span>
-                    </div>
-                    <div class="compare-footnote">$49/mo Pro plan</div>
-                </div>
-                <div class="compare-card compare-us">
-                    <div class="compare-logo">DarkComps</div>
-                    <div class="compare-answer">
-                        <span class="compare-label">Apple / Xnor.ai price</span>
-                        <span class="compare-value compare-green">$55M &ndash; $94M</span>
-                    </div>
-                    <div class="compare-footnote">Calibrated range from 5 public signals, fully traceable</div>
-                </div>
             </div>
         </div>
     </section>
@@ -332,9 +320,7 @@
             <div class="footer-powered">
                 <span>Powered by</span>
                 <a href="https://twons.co" target="_blank" rel="noopener">
-                    <div class="footer-logo-circle">
-                        <img src="assets/images/twons_logo.png" alt="Two Ns Consulting">
-                    </div>
+                    <img src="assets/images/twons_logo.png" alt="Two Ns Consulting">
                     <span>Two Ns Consulting LLC</span>
                 </a>
             </div>

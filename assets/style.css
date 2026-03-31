@@ -92,7 +92,7 @@ nav {
 .centered { text-align: center; }
 
 .act {
-    padding: 140px 32px;
+    padding: 72px 32px;
     position: relative;
 }
 
@@ -102,7 +102,7 @@ nav {
 }
 
 .section-header {
-    margin-bottom: 48px;
+    margin-bottom: 32px;
 }
 
 .section-tag {
@@ -130,13 +130,13 @@ nav {
 /* ---- ACT 1: Opening ---- */
 
 .act-opening {
-    min-height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
     background: var(--bg-1);
     overflow: hidden;
     padding-top: 100px;
+    padding-bottom: 64px;
 }
 
 .act-opening .act-content {
@@ -286,7 +286,62 @@ nav {
     50% { transform: translateY(6px); }
 }
 
-/* ---- ACT 2: Signals ---- */
+/* ---- ACT 2a: Before (what you get today) ---- */
+
+.act-before {
+    background: var(--bg-1);
+    padding-bottom: 24px;
+}
+
+.before-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.before-card {
+    background: var(--bg-3);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.before-source {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--text-3);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.before-result {
+    font-size: 0.9rem;
+    color: var(--text-2);
+}
+
+.before-result strong {
+    color: var(--red);
+}
+
+.before-summary {
+    font-size: 0.85rem;
+    color: var(--text-3);
+    text-align: center;
+    font-style: italic;
+}
+
+.section-sub {
+    font-size: 0.95rem;
+    color: var(--text-2);
+    margin-top: 10px;
+    line-height: 1.6;
+}
+
+/* ---- ACT 2b: Signals ---- */
 
 .act-signals {
     background: var(--bg-2);
@@ -671,7 +726,7 @@ nav {
 
 .act-pitch {
     background: var(--bg-1);
-    padding: 160px 32px;
+    padding: 80px 32px;
 }
 
 .pitch-context {
@@ -821,7 +876,7 @@ nav {
 
 .act-cta {
     background: var(--bg-2);
-    padding: 120px 32px;
+    padding: 72px 32px;
 }
 
 .act-cta h2 {
@@ -896,18 +951,7 @@ footer {
 }
 
 .footer-powered a:hover { opacity: 1; }
-.footer-logo-circle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    background: white;
-    border-radius: 50%;
-    flex-shrink: 0;
-}
-
-.footer-logo-circle img { height: 20px; }
+.footer-powered img { height: 22px; }
 .footer-powered a span { color: var(--text-2); font-size: 0.8rem; font-weight: 500; }
 
 .footer-copy {
@@ -941,7 +985,7 @@ footer {
     .reveal-header, .reveal-row { grid-template-columns: 1fr 120px 50px; gap: 8px; padding: 12px 16px; }
     .section-header h2 { font-size: 1.5rem; }
     .pitch-quote { font-size: 1.7rem; }
-    .compare-grid { grid-template-columns: 1fr; }
+    .before-grid { grid-template-columns: 1fr; }
     .credibility-grid { grid-template-columns: 1fr; }
     .scale-stats { grid-template-columns: 1fr; gap: 10px; }
     .footer-content { flex-direction: column; gap: 12px; }
