@@ -14,338 +14,235 @@
 
     <nav>
         <div class="nav-container">
-            <a href="#" class="nav-logo">
-                <span class="logo-text">Dark<span class="logo-accent">Comps</span></span>
-            </a>
+            <a href="#" class="nav-logo">Dark<span class="accent">Comps</span></a>
             <a href="#contact" class="nav-cta">Request Early Access</a>
         </div>
     </nav>
 
-    <!-- ACT 1: The deal -->
-    <section class="act act-opening">
-        <div class="opening-bg"></div>
-        <div class="act-content">
-            <div class="opening-top">
-                <h1>Comparable acquisition data for the deals that never get reported.</h1>
-                <p class="opening-sub">Most startup acquisitions under $200M close without disclosing the price. DarkComps reconstructs those prices from public signals&mdash;giving VCs the comp data they need to value portfolio companies at exit.</p>
-            </div>
-            <div class="deal-card" id="deal-card">
-                <div class="deal-card-header">
+    <!-- HERO -->
+    <section class="hero">
+        <div class="container">
+            <h1>Comparable acquisition data for the deals that never get reported.</h1>
+            <p class="hero-sub">Most startup acquisitions under $200M close without disclosing the price. DarkComps reconstructs those prices from public signals&mdash;giving VCs the comp data they need to value portfolio companies at exit.</p>
+
+            <div class="deal-card">
+                <div class="deal-header">
                     <span class="deal-date">January 15, 2020</span>
-                    <span class="deal-badge">Real deal</span>
+                    <span class="badge badge-green">Real deal</span>
                 </div>
                 <h2 class="deal-title">Apple acquires Xnor.ai</h2>
-                <p class="deal-detail">Seattle-based edge AI startup &middot; 70 employees &middot; Spun out of Allen Institute for AI</p>
-                <div class="price-block" id="price-block">
+                <p class="deal-meta">Seattle-based edge AI startup &middot; 70 employees &middot; Spun out of Allen Institute for AI</p>
+                <div class="deal-price deal-price-hidden">
                     <span class="price-label">Acquisition price</span>
-                    <span class="price-value" id="price-display">UNDISCLOSED</span>
+                    <span class="price-val">UNDISCLOSED</span>
                 </div>
-                <p class="deal-card-note">This is what 90% of startup deals look like in every database you can buy.</p>
-            </div>
-            <div class="scroll-hint">
-                <span>We can do better &mdash; scroll</span>
-                <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M10 4v12m0 0l-4-4m4 4l4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <p class="deal-note">This is what 90% of startup deals look like in every database you can buy.</p>
             </div>
         </div>
     </section>
 
-    <!-- ACT 2: Before/After + Signals -->
-    <section class="act act-before">
-        <div class="act-content">
-            <div class="section-header">
-                <span class="section-tag">What you get today</span>
-                <h2>Search "Apple Xnor.ai" in any deal database.</h2>
-            </div>
-            <div class="before-grid">
-                <div class="before-card">
-                    <span class="before-source">PitchBook</span>
-                    <span class="before-result">Deal value: <strong>Undisclosed</strong></span>
+    <!-- WHAT OTHERS SHOW YOU -->
+    <section class="section bg-alt">
+        <div class="container">
+            <p class="section-label">What you get today</p>
+            <h2>Search "Apple Xnor.ai" in any deal database.</h2>
+            <div class="others-grid">
+                <div class="others-card">
+                    <span class="others-name">PitchBook</span>
+                    <span class="others-result">Deal value: <strong>Undisclosed</strong></span>
                 </div>
-                <div class="before-card">
-                    <span class="before-source">Crunchbase</span>
-                    <span class="before-result">Acquisition price: <strong>—</strong></span>
+                <div class="others-card">
+                    <span class="others-name">Crunchbase</span>
+                    <span class="others-result">Acquisition price: <strong>&mdash;</strong></span>
                 </div>
-                <div class="before-card">
-                    <span class="before-source">CB Insights</span>
-                    <span class="before-result">Terms not disclosed</span>
+                <div class="others-card">
+                    <span class="others-name">CB Insights</span>
+                    <span class="others-result">Terms not disclosed</span>
                 </div>
             </div>
-            <p class="before-summary">Three paid subscriptions. Zero price data. This is the industry standard.</p>
+            <p class="others-aside">Three paid subscriptions. Zero price data.</p>
         </div>
     </section>
 
-    <section class="act act-signals">
-        <div class="act-content">
-            <div class="section-header">
-                <span class="section-tag">What DarkComps finds</span>
-                <h2>We look where they don't.</h2>
-                <p class="section-sub">For the same deal, DarkComps extracts five pricing signals from freely available public records:</p>
-            </div>
+    <!-- WHAT DARKCOMPS FINDS -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">What DarkComps finds</p>
+            <h2>We look where they don't.</h2>
+            <p class="section-sub">For the same deal, we extract five pricing signals from freely available public records:</p>
 
-            <div class="signal-feed">
-                <div class="signal signal-red" data-delay="0">
+            <div class="signals">
+                <div class="signal signal-red">
                     <div class="signal-top">
-                        <span class="signal-source">FTC / HSR database</span>
-                        <span class="signal-badge badge-ceiling">Hard ceiling</span>
+                        <span class="signal-src">FTC / HSR database</span>
+                        <span class="badge badge-red">Hard ceiling</span>
                     </div>
-                    <p class="signal-finding">No Hart-Scott-Rodino antitrust filing found &mdash; meaning the deal was below the reporting threshold</p>
-                    <div class="signal-result">
-                        <span class="constraint constraint-red">Price &lt; $94M</span>
-                    </div>
+                    <p>No Hart-Scott-Rodino antitrust filing &mdash; deal was below the reporting threshold</p>
+                    <span class="constraint c-red">Price &lt; $94M</span>
                 </div>
-
-                <div class="signal signal-green" data-delay="1">
+                <div class="signal signal-green">
                     <div class="signal-top">
-                        <span class="signal-source">Funding records</span>
-                        <span class="signal-badge badge-floor">Hard floor</span>
+                        <span class="signal-src">Funding records</span>
+                        <span class="badge badge-green">Hard floor</span>
                     </div>
-                    <p class="signal-finding">Xnor raised $14.6M (Seed + Series A). Investors wouldn't accept less than they put in.</p>
-                    <div class="signal-result">
-                        <span class="constraint constraint-green">Price &gt; $14.6M</span>
-                    </div>
+                    <p>Xnor raised $14.6M (Seed + Series A). Investors wouldn't accept less.</p>
+                    <span class="constraint c-green">Price &gt; $14.6M</span>
                 </div>
-
-                <div class="signal signal-amber" data-delay="2">
+                <div class="signal signal-amber">
                     <div class="signal-top">
-                        <span class="signal-source">Headcount data</span>
-                        <span class="signal-badge badge-anchor">Anchor</span>
+                        <span class="signal-src">Headcount data</span>
+                        <span class="badge badge-amber">Anchor</span>
                     </div>
-                    <p class="signal-finding">~70 employees at acquisition. Comparable acqui-hires price at $0.5M&ndash;$3M per head.</p>
-                    <div class="signal-result">
-                        <span class="constraint constraint-amber">$35M &ndash; $210M range</span>
-                    </div>
+                    <p>~70 employees. Comparable acqui-hires price at $0.5M&ndash;$3M per head.</p>
+                    <span class="constraint c-amber">$35M &ndash; $210M</span>
                 </div>
-
-                <div class="signal signal-amber" data-delay="3">
+                <div class="signal signal-amber">
                     <div class="signal-top">
-                        <span class="signal-source">Press reports</span>
-                        <span class="signal-badge badge-anchor">Anchor</span>
+                        <span class="signal-src">Press reports</span>
+                        <span class="badge badge-amber">Anchor</span>
                     </div>
-                    <p class="signal-finding">GeekWire, The Verge, and Bloomberg each reported "approximately $200 million"</p>
-                    <div class="signal-result">
-                        <span class="constraint constraint-amber">~$200M &plusmn; 30%</span>
-                    </div>
+                    <p>GeekWire, The Verge, and Bloomberg each reported "approximately $200 million"</p>
+                    <span class="constraint c-amber">~$200M &plusmn; 30%</span>
                 </div>
-
-                <div class="signal signal-amber" data-delay="4">
+                <div class="signal signal-amber">
                     <div class="signal-top">
-                        <span class="signal-source">Acquirer's 10-K filing</span>
-                        <span class="signal-badge badge-anchor">Sum constraint</span>
+                        <span class="signal-src">Acquirer's 10-K filing</span>
+                        <span class="badge badge-amber">Sum constraint</span>
                     </div>
-                    <p class="signal-finding">Apple's FY2020 total M&amp;A spend was $1.5B. Known deals account for $1.3B. The remainder constrains unknowns.</p>
-                    <div class="signal-result">
-                        <span class="constraint constraint-amber">Residual budget ~$200M</span>
-                    </div>
+                    <p>Apple's FY2020 total M&amp;A spend: $1.5B. Known deals sum to $1.3B.</p>
+                    <span class="constraint c-amber">Residual ~$200M</span>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ACT 3: Convergence -->
-    <section class="act act-converge">
-        <div class="act-content">
-            <div class="section-header">
-                <span class="section-tag">Constraint accumulation</span>
-                <h2>Each signal narrows the range.</h2>
-            </div>
+    <!-- CONVERGENCE -->
+    <section class="section bg-alt">
+        <div class="container">
+            <p class="section-label">Constraint accumulation</p>
+            <h2>Each signal narrows the range.</h2>
 
             <div class="range-viz">
                 <div class="range-scale">
-                    <span>$0</span>
-                    <span>$50M</span>
-                    <span>$100M</span>
-                    <span>$150M</span>
-                    <span>$200M</span>
-                    <span>$250M</span>
+                    <span>$0</span><span>$50M</span><span>$100M</span><span>$150M</span><span>$200M</span><span>$250M</span>
                 </div>
-
-                <div class="range-row" data-step="0">
-                    <div class="range-label">No data</div>
-                    <div class="range-track">
-                        <div class="range-bar bar-dim" style="left: 0%; width: 100%;"></div>
-                    </div>
-                    <div class="range-interval">$0 &ndash; $250M</div>
+                <div class="range-row">
+                    <span class="range-label">No data</span>
+                    <div class="range-track"><div class="rbar rbar-dim" style="left:0;width:100%"></div></div>
+                    <span class="range-val">$0 &ndash; $250M</span>
                 </div>
-
-                <div class="range-row" data-step="1">
-                    <div class="range-label">+ HSR ceiling</div>
-                    <div class="range-track">
-                        <div class="range-bar bar-active" style="left: 0%; width: 37.6%;"></div>
-                    </div>
-                    <div class="range-interval">$0 &ndash; $94M</div>
+                <div class="range-row">
+                    <span class="range-label">+ HSR ceiling</span>
+                    <div class="range-track"><div class="rbar rbar-mid" style="left:0;width:37.6%"></div></div>
+                    <span class="range-val">$0 &ndash; $94M</span>
                 </div>
-
-                <div class="range-row" data-step="2">
-                    <div class="range-label">+ Funding floor</div>
-                    <div class="range-track">
-                        <div class="range-bar bar-active" style="left: 5.8%; width: 31.8%;"></div>
-                    </div>
-                    <div class="range-interval">$14.6M &ndash; $94M</div>
+                <div class="range-row">
+                    <span class="range-label">+ Funding floor</span>
+                    <div class="range-track"><div class="rbar rbar-mid" style="left:5.8%;width:31.8%"></div></div>
+                    <span class="range-val">$14.6M &ndash; $94M</span>
                 </div>
-
-                <div class="range-row" data-step="3">
-                    <div class="range-label">+ Employee anchor</div>
-                    <div class="range-track">
-                        <div class="range-bar bar-active" style="left: 14%; width: 23.6%;"></div>
-                    </div>
-                    <div class="range-interval">$35M &ndash; $94M</div>
+                <div class="range-row">
+                    <span class="range-label">+ Employees</span>
+                    <div class="range-track"><div class="rbar rbar-mid" style="left:14%;width:23.6%"></div></div>
+                    <span class="range-val">$35M &ndash; $94M</span>
                 </div>
-
-                <div class="range-row" data-step="4">
-                    <div class="range-label">+ Press &amp; 10-K</div>
-                    <div class="range-track">
-                        <div class="range-bar bar-result" style="left: 22%; width: 15.6%;"></div>
-                    </div>
-                    <div class="range-interval interval-result">$55M &ndash; $94M</div>
+                <div class="range-row">
+                    <span class="range-label">+ Press &amp; 10-K</span>
+                    <div class="range-track"><div class="rbar rbar-final" style="left:22%;width:15.6%"></div></div>
+                    <span class="range-val range-val-final">$55M &ndash; $94M</span>
                 </div>
             </div>
 
-            <div class="converge-result">
-                <div class="result-card">
-                    <span class="result-label">DarkComps estimate</span>
-                    <span class="result-value">$55M &ndash; $94M</span>
-                    <span class="result-detail">5 public signals &middot; no insider information &middot; fully traceable</span>
+            <!-- THE REVEAL -->
+            <div class="reveal-card">
+                <div class="reveal-row-pair">
+                    <div class="reveal-item">
+                        <span class="reveal-label">DarkComps estimate</span>
+                        <span class="reveal-number reveal-estimate">$55M &ndash; $94M</span>
+                    </div>
+                    <div class="reveal-divider"></div>
+                    <div class="reveal-item">
+                        <span class="reveal-label">Actual sale price (confirmed by press)</span>
+                        <span class="reveal-number reveal-actual">~$200M</span>
+                    </div>
                 </div>
+                <p class="reveal-note">Multiple sources (GeekWire, Bloomberg) later confirmed the price at approximately $200M. Our hard constraint from the HSR threshold was based on 2020 rules &mdash; this deal shows why cross-referencing multiple signal types matters.</p>
             </div>
         </div>
     </section>
 
-    <!-- Deal table + pitch + credibility + CTA — all compact -->
-    <section class="act act-reveal">
-        <div class="act-content">
-            <div class="section-header">
-                <span class="section-tag">At scale</span>
-                <h2>We do this for every deal in your sector.</h2>
-            </div>
+    <!-- AT SCALE -->
+    <section class="section">
+        <div class="container">
+            <p class="section-label">At scale</p>
+            <h2>We do this for every deal in your sector.</h2>
 
-            <div class="reveal-table">
-                <div class="reveal-header">
-                    <span>Acquisition</span>
-                    <span>Estimated range</span>
-                    <span>Year</span>
-                </div>
-                <div class="reveal-row">
-                    <span class="reveal-deal-name">Cisco <span class="arrow">&rarr;</span> MindMeld</span>
-                    <span class="reveal-range">$95M &ndash; $140M</span>
-                    <span class="reveal-year">2017</span>
-                </div>
-                <div class="reveal-row">
-                    <span class="reveal-deal-name">MongoDB <span class="arrow">&rarr;</span> Realm</span>
-                    <span class="reveal-range">$28M &ndash; $52M</span>
-                    <span class="reveal-year">2019</span>
-                </div>
-                <div class="reveal-row">
-                    <span class="reveal-deal-name">Google <span class="arrow">&rarr;</span> Alter</span>
-                    <span class="reveal-range">$70M &ndash; $130M</span>
-                    <span class="reveal-year">2022</span>
-                </div>
-                <div class="reveal-row">
-                    <span class="reveal-deal-name">Teladoc <span class="arrow">&rarr;</span> HealthiestYou</span>
-                    <span class="reveal-range">$120M &ndash; $170M</span>
-                    <span class="reveal-year">2016</span>
-                </div>
-                <div class="reveal-row">
-                    <span class="reveal-deal-name">Allscripts <span class="arrow">&rarr;</span> Practice Fusion</span>
-                    <span class="reveal-range">$75M &ndash; $115M</span>
-                    <span class="reveal-year">2018</span>
-                </div>
-                <div class="reveal-row row-highlight">
-                    <span class="reveal-deal-name">??? <span class="arrow">&rarr;</span> Your portfolio company</span>
-                    <span class="reveal-range highlight-range">$__M &ndash; $__M</span>
-                    <span class="reveal-year">2026</span>
-                </div>
-            </div>
+            <table class="deal-table">
+                <thead>
+                    <tr><th>Acquisition</th><th>Estimated range</th><th>Year</th></tr>
+                </thead>
+                <tbody>
+                    <tr><td>Cisco &rarr; MindMeld</td><td class="green">$95M &ndash; $140M</td><td>2017</td></tr>
+                    <tr><td>MongoDB &rarr; Realm</td><td class="green">$28M &ndash; $52M</td><td>2019</td></tr>
+                    <tr><td>Google &rarr; Alter</td><td class="green">$70M &ndash; $130M</td><td>2022</td></tr>
+                    <tr><td>Teladoc &rarr; HealthiestYou</td><td class="green">$120M &ndash; $170M</td><td>2016</td></tr>
+                    <tr><td>Allscripts &rarr; Practice Fusion</td><td class="green">$75M &ndash; $115M</td><td>2018</td></tr>
+                    <tr class="highlight-row"><td>??? &rarr; Your portfolio company</td><td>$__M &ndash; $__M</td><td>2026</td></tr>
+                </tbody>
+            </table>
         </div>
     </section>
 
-    <section class="act act-bottom">
-        <div class="act-content">
-            <!-- Pitch -->
-            <div class="bottom-pitch centered">
-                <p class="pitch-context">Every board meeting. Every fairness opinion. Every negotiation.</p>
-                <h2 class="pitch-quote">"What comparable transactions did you use?"</h2>
-                <p class="pitch-body">PitchBook says <span class="strikethrough">undisclosed</span>. Crunchbase says <span class="strikethrough">undisclosed</span>. The acquirer has done fifty deals. You've done one.</p>
-                <p class="pitch-answer">DarkComps gives you the data they don't want you to have.</p>
-            </div>
+    <!-- PITCH -->
+    <section class="section bg-alt pitch">
+        <div class="container centered">
+            <p class="pitch-above">Every board meeting. Every fairness opinion. Every negotiation.</p>
+            <h2 class="pitch-quote">"What comparable transactions did you use?"</h2>
+            <p class="pitch-body">PitchBook says <span class="strike">undisclosed</span>. Crunchbase says <span class="strike">undisclosed</span>. The acquirer has done fifty deals. You've done one.</p>
+            <p class="pitch-answer">DarkComps gives you the data they don't want you to have.</p>
+        </div>
+    </section>
 
-            <!-- Credibility -->
-            <div class="credibility-grid">
-                <div class="credibility-method">
-                    <span class="section-tag">Methodology</span>
+    <!-- CREDIBILITY -->
+    <section class="section">
+        <div class="container">
+            <div class="cred-grid">
+                <div class="cred-card">
+                    <p class="section-label">Methodology</p>
                     <h3>Constraint accumulation, not guesswork.</h3>
-                    <p>DarkComps triangulates hard bounds (regulatory filings, funding floors) with soft anchors (press estimates, employee counts, acquirer financials). Every estimate is traceable to specific public documents.</p>
+                    <p>We triangulate hard bounds (regulatory filings, funding floors) with soft anchors (press estimates, employee counts, acquirer financials). Every estimate is traceable to specific public documents.</p>
                 </div>
-                <div class="credibility-team">
-                    <span class="section-tag">Who built this</span>
+                <div class="cred-card">
+                    <p class="section-label">Who built this</p>
                     <h3>Two Ns Consulting</h3>
-                    <p>Built by <strong>Cedric Neumann, PhD</strong>&mdash;applied statistician, 20+ years in quantitative analysis and AI. Expert witness in federal courts. <a href="https://twons.co" target="_blank">twons.co</a></p>
+                    <p>Built by <strong>Cedric Neumann, PhD</strong> &mdash; applied statistician, 20+ years in quantitative analysis and AI. Expert witness in federal courts. 50+ peer-reviewed publications.</p>
+                    <a href="https://twons.co" target="_blank" class="cred-link">twons.co &rarr;</a>
                 </div>
             </div>
+        </div>
+    </section>
 
-            <!-- CTA -->
-            <div id="contact" class="bottom-cta centered">
-                <h2>Request Early Access</h2>
-                <p>We're working with a select group of VCs and M&amp;A advisors. If you need comp data for the deals that never get reported, we want to talk.</p>
-                <a href="mailto:info@twons.co?subject=DarkComps%20Early%20Access&body=Name:%0AOrganization:%0ARole:%0AWhat%20types%20of%20deals%20are%20you%20looking%20for%20comps%20on?" class="cta-button">Request Access &mdash; info@twons.co</a>
-            </div>
+    <!-- CTA -->
+    <section id="contact" class="section bg-alt">
+        <div class="container centered">
+            <h2>Request Early Access</h2>
+            <p class="cta-body">We're working with a select group of VCs and M&amp;A advisors. If you need comp data for the deals that never get reported, we want to talk.</p>
+            <a href="mailto:info@twons.co?subject=DarkComps%20Early%20Access&body=Name:%0AOrganization:%0ARole:%0AWhat%20types%20of%20deals%20are%20you%20looking%20for%20comps%20on?" class="cta-btn">Request Access &mdash; info@twons.co</a>
         </div>
     </section>
 
     <footer>
-        <div class="footer-content">
-            <div class="footer-powered">
-                <span>Powered by</span>
-                <a href="https://twons.co" target="_blank" rel="noopener">
+        <div class="container footer-inner">
+            <div class="footer-brand">
+                <span class="footer-powered-by">Powered by</span>
+                <div class="footer-logo-stack">
                     <img src="assets/images/twons_logo.png" alt="Two Ns Consulting">
                     <span>Two Ns Consulting LLC</span>
-                </a>
+                </div>
             </div>
-            <div class="footer-copy">&copy; Two Ns Consulting LLC, 2026</div>
+            <span class="footer-copy">&copy; Two Ns Consulting LLC, 2026</span>
         </div>
     </footer>
-
-    <script>
-        const io = (selector, callback, options = {}) => {
-            const obs = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (entry.isIntersecting) callback(entry.target);
-                });
-            }, { threshold: options.threshold || 0.2 });
-            document.querySelectorAll(selector).forEach(el => obs.observe(el));
-        };
-
-        // Signals slide in with stagger
-        io('.signal', (el) => {
-            const delay = el.dataset.delay || 0;
-            setTimeout(() => el.classList.add('visible'), delay * 350);
-        }, { threshold: 0.3 });
-
-        // Range rows appear with stagger
-        io('.range-row', (el) => {
-            const step = el.dataset.step || 0;
-            setTimeout(() => el.classList.add('visible'), step * 500);
-        }, { threshold: 0.4 });
-
-        // Generic fade-in
-        io('.fade-in', (el) => el.classList.add('visible'));
-
-        document.querySelectorAll('.reveal-row, .compare-card, .act-pitch .act-content, .act-cta .act-content, .deal-card, .converge-summary, .credibility-method, .credibility-team, .scale-stats').forEach(el => {
-            el.classList.add('fade-in');
-        });
-
-        // Deal card price animation — flips from UNDISCLOSED to range when scrolling back up
-        const priceBlock = document.getElementById('price-block');
-        const priceDisplay = document.getElementById('price-display');
-        let priceRevealed = false;
-
-        io('.act-converge .range-row[data-step="4"]', () => {
-            if (!priceRevealed) {
-                priceRevealed = true;
-                priceBlock.classList.add('price-revealed');
-                priceDisplay.textContent = '$55M – $94M';
-            }
-        }, { threshold: 0.5 });
-    </script>
 
 </body>
 </html>
