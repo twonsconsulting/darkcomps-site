@@ -136,6 +136,11 @@ nav {
     justify-content: center;
     background: var(--bg-1);
     overflow: hidden;
+    padding-top: 100px;
+}
+
+.act-opening .act-content {
+    max-width: 720px;
 }
 
 .opening-bg {
@@ -147,14 +152,46 @@ nav {
     pointer-events: none;
 }
 
+.opening-top {
+    margin-bottom: 36px;
+}
+
+.opening-top h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    letter-spacing: -0.04em;
+    line-height: 1.2;
+    margin-bottom: 16px;
+}
+
+.opening-sub {
+    font-size: 1.05rem;
+    color: var(--text-2);
+    line-height: 1.7;
+}
+
 .deal-card {
     background: var(--bg-3);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 40px 48px;
+    padding: 32px 36px;
     margin-bottom: 32px;
     position: relative;
     overflow: hidden;
+}
+
+.deal-title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 8px;
+}
+
+.deal-card-note {
+    margin-top: 16px;
+    font-size: 0.82rem;
+    color: var(--text-3);
+    font-style: italic;
 }
 
 .deal-card::before {
@@ -262,16 +299,19 @@ nav {
 }
 
 .signal {
-    display: flex;
-    gap: 16px;
     padding: 20px 24px;
     background: var(--bg-3);
     border: 1px solid var(--border);
+    border-left: 3px solid var(--border);
     border-radius: 12px;
     opacity: 0;
     transform: translateY(12px);
     transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
 }
+
+.signal-red { border-left-color: var(--red); }
+.signal-green { border-left-color: var(--green); }
+.signal-amber { border-left-color: var(--amber); }
 
 .signal.visible {
     opacity: 1;
@@ -283,22 +323,9 @@ nav {
     background: rgba(22, 27, 38, 0.9);
 }
 
-.signal-icon {
-    flex-shrink: 0;
-    width: 36px;
-    height: 36px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-    margin-top: 2px;
-}
-
-.signal-icon-red { background: var(--red-soft); color: var(--red); }
-.signal-icon-green { background: var(--green-soft); color: var(--green); }
-.signal-icon-amber { background: var(--amber-soft); color: var(--amber); }
-
-.signal-main { flex: 1; min-width: 0; }
+.signal:hover.signal-red { border-left-color: var(--red); }
+.signal:hover.signal-green { border-left-color: var(--green); }
+.signal:hover.signal-amber { border-left-color: var(--amber); }
 
 .signal-top {
     display: flex;
@@ -339,11 +366,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
-}
-
-.signal-arrow {
-    color: var(--text-3);
-    font-size: 0.85rem;
+    margin-top: 4px;
 }
 
 .constraint {
