@@ -530,15 +530,40 @@ nav {
     font-weight: 600;
 }
 
-.converge-summary {
-    text-align: center;
-    margin-top: 36px;
+.converge-result {
+    margin-top: 28px;
 }
 
-.converge-summary p {
+.result-card {
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.08), rgba(124, 92, 252, 0.08));
+    border: 1px solid var(--green);
+    border-radius: 14px;
+    padding: 28px 32px;
+    text-align: center;
+}
+
+.result-label {
+    display: block;
+    font-size: 0.75rem;
+    font-weight: 600;
     color: var(--text-3);
-    font-size: 0.9rem;
-    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 8px;
+}
+
+.result-value {
+    display: block;
+    font-family: var(--mono);
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--green);
+    margin-bottom: 8px;
+}
+
+.result-detail {
+    font-size: 0.82rem;
+    color: var(--text-3);
 }
 
 /* ---- ACT 4: Deal table ---- */
@@ -722,12 +747,39 @@ nav {
     color: var(--text-3);
 }
 
-/* ---- ACT 5: Pitch ---- */
+/* ---- Bottom section (pitch + credibility + CTA combined) ---- */
 
-.act-pitch {
+.act-bottom {
     background: var(--bg-1);
-    padding: 80px 32px;
+    padding: 72px 32px;
 }
+
+.bottom-pitch {
+    margin-bottom: 56px;
+}
+
+.bottom-cta {
+    margin-top: 56px;
+    padding-top: 40px;
+    border-top: 1px solid var(--border);
+}
+
+.bottom-cta h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    margin-bottom: 12px;
+}
+
+.bottom-cta p {
+    color: var(--text-2);
+    font-size: 0.95rem;
+    max-width: 480px;
+    margin: 0 auto 24px;
+    line-height: 1.6;
+}
+
+/* ---- Pitch (now inside bottom) ---- */
 
 .pitch-context {
     font-size: 0.9rem;
@@ -765,11 +817,7 @@ nav {
     margin-top: 24px;
 }
 
-/* ---- ACT 5.5: Credibility ---- */
-
-.act-credibility {
-    background: var(--bg-2);
-}
+/* ---- Credibility (inside bottom) ---- */
 
 .credibility-grid {
     display: grid;
@@ -856,43 +904,7 @@ nav {
     text-decoration: none !important;
 }
 
-/* ---- CTA refinements ---- */
-
-.cta-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-}
-
-.cta-note {
-    font-size: 0.8rem !important;
-    color: var(--text-3) !important;
-    max-width: 400px !important;
-    margin: 0 auto !important;
-}
-
-/* ---- ACT 6: CTA ---- */
-
-.act-cta {
-    background: var(--bg-2);
-    padding: 72px 32px;
-}
-
-.act-cta h2 {
-    font-size: 2rem;
-    font-weight: 700;
-    letter-spacing: -0.03em;
-    margin-bottom: 16px;
-}
-
-.act-cta p {
-    color: var(--text-2);
-    font-size: 1rem;
-    max-width: 480px;
-    margin: 0 auto 32px;
-    line-height: 1.7;
-}
+/* ---- Scale stats (removed, keeping empty marker for cleanup) ---- */
 
 .cta-button {
     display: inline-block;
@@ -951,7 +963,14 @@ footer {
 }
 
 .footer-powered a:hover { opacity: 1; }
-.footer-powered img { height: 22px; }
+
+.footer-powered img {
+    height: 24px;
+    background: white;
+    border-radius: 6px;
+    padding: 3px;
+}
+
 .footer-powered a span { color: var(--text-2); font-size: 0.8rem; font-weight: 500; }
 
 .footer-copy {
