@@ -76,7 +76,7 @@ nav {
 }
 
 .nav-logo-img {
-    height: 36px;
+    height: 44px;
 }
 
 .nav-right {
@@ -104,6 +104,7 @@ nav {
     position: sticky;
     top: 0;
     min-height: 100vh;
+    margin-bottom: 40vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -119,6 +120,12 @@ nav {
 .tile:nth-child(5) { z-index: 5; }
 .tile:nth-child(6) { z-index: 6; }
 .tile:nth-child(7) { z-index: 7; }
+.tile:nth-child(8) { z-index: 8; }
+
+.tile-last {
+    position: relative;
+    margin-bottom: 0;
+}
 
 /* Alternating backgrounds for tiles */
 .tile:nth-child(odd) { background: var(--bg); }
@@ -168,9 +175,50 @@ nav {
     background: var(--bg);
 }
 
-.hero h1 {
-    font-size: 2rem; font-weight: 800;
-    letter-spacing: -0.035em; line-height: 1.15;
+/* ---- Title tile ---- */
+
+.title-tile {
+    background: var(--bg);
+}
+
+.product-name {
+    font-size: 4.5rem; font-weight: 800;
+    letter-spacing: -0.045em; line-height: 1;
+    margin-bottom: 16px;
+    color: var(--t1);
+}
+
+.product-name span { color: var(--accent); }
+
+.product-tagline {
+    font-size: 1.15rem; color: var(--t2);
+    line-height: 1.6; max-width: 480px;
+    margin: 0 auto;
+}
+
+.scroll-cue {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex; flex-direction: column; align-items: center; gap: 6px;
+    color: var(--t2);
+    animation: bounce 2s ease infinite;
+}
+
+.scroll-label {
+    font-size: 0.75rem; font-weight: 500;
+    letter-spacing: 0.1em; text-transform: uppercase;
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateX(-50%) translateY(0); opacity: 0.6; }
+    50% { transform: translateX(-50%) translateY(10px); opacity: 1; }
+}
+
+.deal-title {
+    font-size: 1.5rem; font-weight: 700;
+    letter-spacing: -0.025em; line-height: 1.2;
     margin-bottom: 8px;
 }
 
@@ -351,7 +399,8 @@ footer {
     .tile { min-height: auto; border-radius: var(--r-lg) var(--r-lg) 0 0; }
     .sec { padding: 56px 0; }
     .hero { padding: 80px 28px 40px; }
-    .hero h1 { font-size: 1.45rem; }
+    .product-name { font-size: 2.8rem; }
+    .deal-title { font-size: 1.25rem; }
     .sec h2, .pitch h2 { font-size: 1.25rem; }
     .grid3 { grid-template-columns: 1fr; }
     .rrow { grid-template-columns: 64px 1fr 72px; gap: 6px; }

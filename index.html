@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DarkComps | Comparable Acquisition Data for Private Deals</title>
     <meta name="description" content="DarkComps provides calibrated comparable acquisition data for VCs and investors valuing portfolio companies at exit.">
+    <meta name="robots" content="noindex, nofollow">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -17,7 +18,7 @@
             <div class="nav-left">
                 <!-- shortcut space reserved -->
             </div>
-            <a href="#" class="nav-logo">
+            <a href="https://twons.co" target="_blank" class="nav-logo">
                 <img src="assets/images/twons_logo.png" alt="Two Ns" class="nav-logo-img">
             </a>
             <div class="nav-right">
@@ -28,7 +29,19 @@
 
     <main class="stack">
 
-    <!-- HERO: deal card IS the hero -->
+    <!-- TITLE CARD -->
+    <section class="title-tile tile">
+        <div class="wrap centered">
+            <h1 class="product-name">dark<span>comps</span></h1>
+            <p class="product-tagline">Comparable acquisition data for the deals that never get reported.</p>
+        </div>
+        <div class="scroll-cue" aria-hidden="true">
+            <span class="scroll-label">Scroll</span>
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+        </div>
+    </section>
+
+    <!-- HERO: deal card -->
     <header class="hero tile">
         <div class="wrap">
             <div class="deal-card">
@@ -36,7 +49,7 @@
                     <span class="deal-date">April 24, 2019</span>
                     <span class="tag tag-green">Real deal</span>
                 </div>
-                <h1>MongoDB acquires Realm</h1>
+                <h2 class="deal-title">MongoDB acquires Realm</h2>
                 <p class="deal-meta">Open-source mobile database &middot; ~50 employees &middot; YC + Khosla-backed &middot; $40M raised</p>
                 <div class="price-bar price-hidden">
                     <span>Acquisition price</span>
@@ -144,7 +157,7 @@
     </section>
 
     <!-- CTA -->
-    <section id="contact" class="sec tile">
+    <section id="contact" class="sec tile tile-last">
         <div class="wrap centered">
             <h2>Request Early Access</h2>
             <p class="body-text">We're working with a select group of VCs and M&amp;A advisors. If you need comparable transaction data for the deals that never get reported, we want to talk.</p>
