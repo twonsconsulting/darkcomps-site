@@ -896,7 +896,18 @@ footer {
 }
 
 .footer-powered a:hover { opacity: 1; }
-.footer-powered img { height: 20px; }
+.footer-logo-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: white;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.footer-logo-circle img { height: 20px; }
 .footer-powered a span { color: var(--text-2); font-size: 0.8rem; font-weight: 500; }
 
 .footer-copy {
